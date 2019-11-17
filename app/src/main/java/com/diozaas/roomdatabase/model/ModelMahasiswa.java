@@ -4,8 +4,11 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
+// implements Serializable karena pada intent untuk Detail Mahasiswa mengirimkan data seluruhnya, dalam satu paket class
 @Entity(tableName = "tb_mahasiswa")
-public class ModelMahasiswa {
+public class ModelMahasiswa implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
     int idMahasiswa;
